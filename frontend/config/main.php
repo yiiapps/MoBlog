@@ -1,9 +1,9 @@
 <?php
 $params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    require (__DIR__ . '/../../common/config/params.php'),
+    require (__DIR__ . '/../../common/config/params-local.php'),
+    require (__DIR__ . '/params.php'),
+    require (__DIR__ . '/params-local.php')
 );
 
 return [
@@ -13,7 +13,7 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'user' => [
-            'identityClass' => 'common\models\Users',
+            'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
         'log' => [
@@ -28,7 +28,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'urlManager' => require(__DIR__ . '/../../common/config/FrontendUrlManager.php'),
+        'urlManager' => require __DIR__ . '/../../common/config/FrontendUrlManager.php',
         'view' => [
             'class' => 'frontend\components\View',
         ],
